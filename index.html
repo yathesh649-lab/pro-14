@@ -1,70 +1,90 @@
 <!doctype html>
+
 <html lang="en">
 <head>
+    <title>Absolute Positioning Example</title>
     <meta charset="utf-8">
-    <title>Absolute and fixed positioning</title>
 
     <style>
+        body {
+            width: 700px;
+            margin: 40px auto;
+            padding: 25px;
+            background-color: #f4f9ff;
+            border: 2px solid #2c3e50;
+            font-family: Arial, Helvetica, sans-serif;
+            position: relative;
+        }
+
+        h1 {
+            color: #1a5276;
+            text-align: center;
+        }
+
         p {
             margin: 0;
         }
 
-        body {
-            width: 550px;
-            padding: 0 25px 20px;
-            border: 1px solid black;
+        main {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
 
-            /* TODO 1: Set the body positioning context */
+        ul {
+            line-height: 2;
+        }
+
+        a {
+            color: #008000;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #e67e22;
+            text-decoration: underline;
         }
 
         aside {
-            width: 80px;
-            padding: 1em;
-            border: 1px solid black;
-
-            /* TODO 2: Use absolute positioning */
-            /* TODO 3: Position the aside 30px from the right */
-            /* TODO 4: Position the aside 50px from the top */
+            width: 150px;
+            padding: 15px;
+            background-color: #ffe6cc;
+            border: 2px solid #e67e22;
+            border-radius: 10px;
+            position: absolute;
+            right: 20px;
+            top: 80px;
         }
+
+        aside a {
+            color: #c0392b;
+        }
+
     </style>
 </head>
 
 <body>
+
     <main>
-        <h1>Our speakers this season</h1>
+        <h1>Upcoming Technology Events</h1>
 
         <ul>
-            <li>
-                October:
-                <a class="date_passed" href="speakers/toobin.html">
-                    Jeffrey Toobin
-                </a>
-            </li>
-
-            <li>
-                November:
-                <a class="date_passed" href="speakers/sorkin.html">
-                    Andrew Ross Sorkin
-                </a>
-            </li>
-
-            <li>
-                January:
-                <a href="speakers/chua.html">
-                    Amy Chua
-                </a>
-            </li>
+            <li>October: <a href="events/web.html">Web Development Workshop</a></li>
+            <li>November: <a href="events/ai.html">Artificial Intelligence Seminar</a></li>
+            <li>January: <a href="events/cloud.html">Cloud Computing Conference</a></li>
         </ul>
 
-        <p>Please contact us for tickets.</p>
+        <p>Register now to reserve your seat for the events.</p>
     </main>
 
     <aside>
         <p>
-            <a href="raffle.html">
-                Enter to win a free ticket!
+            <a href="registration.html">
+                Register and get a free entry pass!
             </a>
         </p>
     </aside>
+
 </body>
 </html>
